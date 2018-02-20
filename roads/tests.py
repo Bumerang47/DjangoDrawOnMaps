@@ -14,20 +14,20 @@ class RoadsTests(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Set up data for the whole TestCase
-        cls.road_data = [[43.67752,43.5098],
-                           [43.67783,43.5099]]
+        cls.road_data = [[43.67752, 43.5098],
+                         [43.67783, 43.5099]]
 
     @classmethod
     def create_road(self, road_code=10024, name="Nalchik",
-        length_km=2014.5, geomtype='LineString',coordinates=list()):
+                    length_km=2014.5, geomtype='LineString', coordinates=list()):
         if len(coordinates) == 0:
             coordinates = self.road_data
         try:
             resp_rd = Roads.objects.get(road_code=road_code)
         except Roads.DoesNotExist:
             resp_rd = Roads.objects.create(
-                road_code=road_code,name=name,length_km=length_km,
-                geomtype=geomtype,coordinates=coordinates)
+                road_code=road_code, name=name, length_km=length_km,
+                geomtype=geomtype, coordinates=coordinates)
         return resp_rd
 
     def test_create_model(self):
@@ -46,6 +46,7 @@ class RoadsTests(TestCase):
         self.assertIn('coordinates', j_resp[0])
         self.assertTrue(len(j_resp[0]['coordinates']) > 0)
 
+
 class AzsTests(TestCase):
     """
     Testes for Azs model and get list
@@ -54,8 +55,8 @@ class AzsTests(TestCase):
     @classmethod
     def setUpTestData(cls):
         # Set up data for the whole TestCase
-        cls.coord_data = [[43.67752,43.5098],
-                           [43.67783,43.5099]]
+        cls.coord_data = [[43.67752, 43.5098],
+                          [43.67783, 43.5099]]
 
     @classmethod
     def create_road(self, road_code=10024, name="Nalchik",
@@ -79,7 +80,7 @@ class AzsTests(TestCase):
         if len(coordinates) == 0:
             coordinates = self.coord_data
         azs = Azs.objects.create(
-            road_code=road,geomtype=geomtype,coordinates=coordinates)
+            road_code=road, geomtype=geomtype, coordinates=coordinates)
         return azs
 
     def test_create_model(self):
@@ -95,7 +96,7 @@ class AzsTests(TestCase):
         road = self.create_road()
         azs = self.create_azs(road)
         azs.road = road
-        url = reverse('road_of_azs', args=(road.road_code,))\
+        url = reverse('road_of_azs', args=(road.road_code,))
         resp = self.client.get(url)
         self.assertEqual(resp.status_code, 200)
 
