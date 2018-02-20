@@ -1,0 +1,18 @@
+#mapid { 
+	width: 80vh;
+	height: 80vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.baseRoad{
+    stroke-width:  5;
+    opacity: 0.6;
+}
+.active {
+    stroke-width: 6;
+    color: #ffd700;
+    stroke: #ffd700;
+    opacity: 1;
+}
