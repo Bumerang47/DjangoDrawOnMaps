@@ -1,9 +1,9 @@
-###DjangoDrawOnMaps
+### DjangoDrawOnMaps
 Простой сервис по отрисовке географических координат из БД на карте.
 
 Backend: **Django**
 
-Отрисовка координат: **Leafletjs**
+Отрисовка координат: **Leaflet.js**
 
 СУБД: **SQLite**
 

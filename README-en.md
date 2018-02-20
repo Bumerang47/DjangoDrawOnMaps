@@ -3,7 +3,7 @@ A simple service for drawing geographic coordinates from a database on a map.
 
 Backend: ** Django **
 
-Drawing coordinates: ** Leafletjs **
+Drawing coordinates: ** Leaflet.js **
 
 DBMS: ** SQLite **
 
