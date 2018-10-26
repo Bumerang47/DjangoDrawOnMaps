@@ -1,9 +1,9 @@
 ### DjangoDrawOnMaps  
 A simple service for drawing geographic coordinates from a database on a map.  
   
-Backend: ** Django **  
-Drawing coordinates: ** Leaflet.js **  
-DBMS: ** SQLite **  
+Backend: **Django**  
+Drawing coordinates: **Leaflet.js**  
+DBMS: **SQLite**  
 
 
 #### Get started  
