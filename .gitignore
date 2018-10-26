@@ -1,5 +1,7 @@
-*pyc
-*.conf
-*.confc
 log/*
+migrations
+*.pyc
 .idea
+.git
+*.sqlite3
+__pycache__

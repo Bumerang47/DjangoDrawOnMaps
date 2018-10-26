@@ -1,6 +1,6 @@
-
 from django.core.serializers.json import Serializer as JSON_Serializer
 import json
+
 
 class Serializer (JSON_Serializer):
     """

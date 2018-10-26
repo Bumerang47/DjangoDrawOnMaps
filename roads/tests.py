@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 from django.core.urlresolvers import reverse
-import json
-from models import Roads, Azs
 from django.test import TestCase
+import json
+from .models import Roads, Azs
 
 
 class RoadsTests(TestCase):
@@ -36,7 +34,7 @@ class RoadsTests(TestCase):
 
     def test_list_view(self):
         # Simple view test
-        r = self.create_road()
+        self.create_road()
         url = reverse("roads_list")
         resp = self.client.get(url)
         self.assertEqual(resp.status_code, 200)

@@ -2,7 +2,6 @@ var DEF_ZOOM = 11;
 var MAP = Object;
 
 $( document ).ready(function() {
-
 	MAP = L.map('mapid');
 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

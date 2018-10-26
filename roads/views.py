@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
-from models import Roads, Azs
+from .models import Roads, Azs
 from django.http import JsonResponse
 from django.core import serializers
 
@@ -50,7 +47,7 @@ def get_road(request, road_code):
 
     try:
         road = Roads.objects.get(road_code=road_code)
-        fields = ('road_code','name','length_km','geomtype','coordinates')
+        fields = ('road_code', 'name', 'length_km', 'geomtype', 'coordinates')
         data = serializers.serialize('json_road', [road], fields=fields)
         return JsonResponse(data, safe=False)
     except Roads.DoesNotExist:
