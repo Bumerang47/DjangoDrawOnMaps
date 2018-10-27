@@ -1,2 +1,3 @@
-static/resources/* linguist-vendored
 static/templates/* linguist-vendored
+static/resources/* linguist-vendored
+static/resources/js/* linguist-vendored=false
